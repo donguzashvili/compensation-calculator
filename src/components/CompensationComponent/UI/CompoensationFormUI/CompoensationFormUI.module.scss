@@ -1,0 +1,66 @@
+@use "@/style/_index.scss" as *;
+
+.formWrapper {
+  min-width: 320px;
+  height: min-content;
+  padding: 40px 0;
+  background-color: $white;
+  clip-path: polygon(
+    0% 12px,
+    12px 0%,
+    calc(100% - 12px) 0%,
+    100% 12px,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0% calc(100% - 12px)
+  );
+
+  @include media(tablet) {
+    padding: 80px 0;
+  }
+
+  form {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    padding: 0 20px;
+
+    @include media(tablet) {
+      padding: 0 20px;
+    }
+
+    button {
+      width: min-content;
+    }
+  }
+
+  .result {
+    border-block: 1px solid $metalLight;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+
+    .resultBox {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 10px;
+      width: 130px;
+
+      .customLineHeight {
+        line-height: 20px;
+      }
+    }
+  }
+
+  .subtotal {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 20px;
+    gap: 4px;
+    line-height: 30px;
+  }
+}

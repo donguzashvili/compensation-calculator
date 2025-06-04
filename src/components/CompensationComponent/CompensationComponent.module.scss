@@ -1,0 +1,12 @@
+@use "@/style/_index.scss" as *;
+
+.compensationComponent {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 40px;
+
+  @include media(desktop) {
+    flex-flow: row nowrap;
+    gap: 100px;
+  }
+}

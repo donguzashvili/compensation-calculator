@@ -1,0 +1,70 @@
+@use "@/style/_index.scss" as *;
+
+.compensationIntro {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 40px;
+  &_intro {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+  }
+
+  &_description {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 40px;
+
+    @include media(tablet) {
+      flex-flow: row nowrap;
+    }
+
+    > img {
+      object-fit: cover;
+      @include media(tablet) {
+        height: 180px;
+        width: 240px;
+      }
+    }
+
+    .listContainer {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 20px;
+
+      .list {
+        li {
+          position: relative;
+          list-style-type: none;
+          padding-left: 30px;
+        }
+
+        > li {
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 16px;
+            height: 4px;
+            background: linear-gradient(to right, $darkRed, $lightRed);
+          }
+        }
+
+        .innerList {
+          li {
+            &::before {
+              content: "";
+              width: 12px;
+              position: absolute;
+              height: 4px;
+              left: 0;
+              top: 0.6em;
+              background: linear-gradient(to right, $metalLightGradientStart, $metalLightGradientEnd);
+            }
+          }
+        }
+      }
+    }
+  }
+}

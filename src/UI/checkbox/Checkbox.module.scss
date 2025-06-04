@@ -1,0 +1,45 @@
+@use "@/style/_index.scss" as *;
+
+$checkMark: url("../../assets/svg/check-svg.svg");
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  &_text {
+    line-height: 20px;
+  }
+
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    padding: 1px;
+    background-color: $white;
+    border: 1px solid transparent;
+    position: relative;
+    background-image: linear-gradient(white, white),
+      linear-gradient(to right, $metalLightGradientStart, $metalLightGradientEnd);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    outline: none;
+
+    &::after {
+      content: $checkMark;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &:checked::after {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "@/style/_index.scss" as *;
+
+.button {
+  border-radius: 30px;
+  height: 60px;
+  background: linear-gradient(to right, $darkRed, $lightRed);
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+
+  &_text {
+    line-height: 20px;
+  }
+
+  &:hover {
+    box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.25), 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    box-shadow: inset 0px 4px 0px 0px rgba(0, 0, 0, 0.25), 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+}

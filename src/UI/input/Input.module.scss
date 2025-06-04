@@ -1,0 +1,38 @@
+@use "@/style/_index.scss" as *;
+
+.inputLabel {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+
+  .inputWrapper {
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white),
+      linear-gradient(to right, $metalLightGradientStart, $metalLightGradientEnd);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-color: $white;
+    border-radius: 4px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px;
+
+    input {
+      border: none;
+      outline: none;
+      height: 100%;
+      width: 100%;
+      @include subtitle1Sizes;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+$metal: rgba(43, 48, 58, 1);
+$metalDark: rgba(17, 19, 23, 1);
+$metalMiddle: rgba(122, 129, 142, 1);
+$metalLight: rgba(233, 237, 244, 1);
+$white: rgba(255, 255, 255, 1);
+$gradient: rgba(56, 58, 72, 1);
+$darkRed: rgba(145, 24, 18, 1);
+$lightRed: rgba(225, 38, 28, 1);
+$metalGradientEnd: rgba(63, 71, 86, 1);
+$metalLightGradientStart: rgba(211, 218, 232, 1);
+$metalLightGradientEnd: rgba(167, 183, 216, 1);
+
+$metalGradient: linear-gradient($metal, $metalGradientEnd);
+$metalGradientLight: linear-gradient($metalLightGradientStart, $metalLightGradientEnd);
+$metalGradientRed: linear-gradient($darkRed, $lightRed);

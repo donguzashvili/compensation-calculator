@@ -1,0 +1,18 @@
+@use "@/style/_index.scss" as *;
+
+.layout {
+  padding: 20px;
+
+  @include media(tablet) {
+    padding: 30px;
+  }
+
+  @include media(laptop) {
+    padding: 100px;
+  }
+
+  @include media(desktop) {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
