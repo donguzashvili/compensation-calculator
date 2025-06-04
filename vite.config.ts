@@ -5,6 +5,7 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/compensation-calculator/",
   plugins: [react(), svgr()],
   resolve: {
     alias: {
