@@ -28,6 +28,7 @@ const CompensationContainer = () => {
       insuranceTotal,
       total,
       daily: +daily.toFixed(2),
+      totalDays: days || 0,
     });
   };
 

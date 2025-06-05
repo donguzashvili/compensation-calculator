@@ -110,7 +110,7 @@ const CompensationFromUI: React.FC<CompensationComponentPropI> = ({
           </div>
           <div className={classes.subtotal}>
             <TextView tag="p" type="subtitle2" color="dark">
-              Compensation total for {days} days (net)
+              Compensation total for {result.totalDays} days (net)
             </TextView>
             <TextView tag="p" type="title4" weight={700} color="dark" className={classes.total}>
               {result.total.toLocaleString()}€

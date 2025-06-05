@@ -5,4 +5,5 @@ export interface CompensationResultI {
   insuranceTotal: number;
   total: number;
   daily: number;
+  totalDays: number;
 }
